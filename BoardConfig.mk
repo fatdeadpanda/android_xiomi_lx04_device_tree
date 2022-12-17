@@ -39,6 +39,9 @@ TW_INCLUDE_REPACKTOOLS := true
 TARGET_BOOTLOADER_BOARD_NAME := mt8167
 TARGET_NO_BOOTLOADER := true
 
+# For Mediatek Boot Image Headers
+BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/mkbootimg.mk
+
 # File systems
 BOARD_HAS_LARGE_FILESYSTEM := true
 #BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16777216 # This is the maximum known partition size, but it can be higher, so we just omit it
@@ -113,12 +116,12 @@ TW_NEW_ION_HEAP := true
 TW_INCLUDE_FB2PNG := true
 TW_MTP_DEVICE := "/dev/mtp_usb"
 TW_NO_USB_STORAGE := true
-TW_EXCLUDE_TWRPAPP := true
+TW_EXCLUDE_TWRPAPP := false
 TW_BACKUP_DATA_MEDIA := true
 TWHAVE_SELINUX := true
 TWRP_INCLUDE_LOGCAT := true
 #TW_DEFAULT_EXTERNAL_STORAGE := true
 #TW_EXCLUDE_MTP := true
 #Recovery
-BOARD_USES_RECOVERY_AS_ROOT := false
+BOARD_USES_RECOVERY_AS_ROOT := true
 
